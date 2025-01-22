@@ -2,7 +2,7 @@ import axios  from "axios";
 
 // for each req injecting token for that created axiosInstance
 const axiosInstance = axios.create({
-    baseURL:'http://localhost:3000'
+    baseURL:'api'
 })
 
 axiosInstance.interceptors.request.use((config)=>{
