@@ -22,7 +22,7 @@ const Addblog = () => {
     if (location.state!= null) {
       axiosInstance
         .put(
-          "api/blog/editblog/" + location.state.val._id,
+          "/blog/editblog/" + location.state.val._id,
           blogData
         )
         .then((res) => {
@@ -31,7 +31,7 @@ const Addblog = () => {
         });
     } else {
       axiosInstance
-        .post("api/blog/addblog", blogData)
+        .post("/blog/addblog", blogData)
         .then((res) => {
           alert("Blog added");
           // console.log(res)
